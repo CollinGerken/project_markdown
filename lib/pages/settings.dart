@@ -17,7 +17,7 @@ class SettingsPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(80.0),
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
