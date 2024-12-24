@@ -1,48 +1,31 @@
-import '../_imports.dart';
+import '/_imports.dart';
 
 class AppState extends ChangeNotifier {
   AppState(){
       if (themeMode == ThemeMode.system) {
-        isSelected = [true, false, false];
+        selectedThemeMode = [true, false, false];
       } else if (themeMode == ThemeMode.light) {
-        isSelected = [false, true, false];
+        selectedThemeMode = [false, true, false];
       } else if (themeMode == ThemeMode.dark) {
-        isSelected = [false, false, true];
+        selectedThemeMode = [false, false, true];
       }
   }
 
-  List<bool> isSelected = [
-    false, 
-    false, 
-    false];
-
   ThemeMode themeMode = ThemeMode.light;
+  List<bool> selectedThemeMode = [false, false, false];
 
-  void setSystemTheme() {
-    themeMode = ThemeMode.system;
-    notifyListeners();
-  }
-  void setLightTheme() {
-    themeMode = ThemeMode.light;
-    notifyListeners();
-  }
-  void setDarkTheme() {
-    themeMode = ThemeMode.dark;
-    notifyListeners();
-  }
-
-  void setState(int index) {
-    isSelected = [false, false, false];
-    isSelected[index] = true;
+  void setTheme(int index) {
+    selectedThemeMode = [false, false, false];
+    selectedThemeMode[index] = true;
     switch (index) {
       case 0:
-        setSystemTheme();
+        themeMode = ThemeMode.system;
         break;
       case 1:
-        setLightTheme();
+        themeMode = ThemeMode.light;
         break;
       case 2:
-        setDarkTheme();
+        themeMode = ThemeMode.dark;
         break;
     }
     notifyListeners();
