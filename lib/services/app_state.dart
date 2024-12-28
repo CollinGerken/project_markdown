@@ -11,7 +11,7 @@ class AppState extends ChangeNotifier {
       }
   }
 
-  ThemeMode themeMode = ThemeMode.light;
+  ThemeMode themeMode = ThemeMode.system;
   List<bool> selectedThemeMode = [false, false, false];
 
   void setTheme(int index) {

@@ -30,6 +30,9 @@ class MainApp extends StatelessWidget {
         darkTheme: darkTheme,
         themeMode: appState.themeMode,
         home: const SettingsPage(),
+        routes: {
+          'document': (context) => Document()
+        },
       );
   }
 }

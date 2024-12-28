@@ -11,6 +11,9 @@ export 'pages/settings/current_settings.dart';
 export 'pages/settings/options.dart';
 
 export 'pages/sliding_drawer.dart';
+export 'pages/document.dart';
+
+export 'components/modal.dart';
 
 // services
 export '/services/app_state.dart';
