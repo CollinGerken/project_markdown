@@ -11,6 +11,7 @@ class Modal extends StatelessWidget {
         height: 120,
         child: Column(
           children: [
+            Text('Name:'),
             TextField(),
           ],
         ),
